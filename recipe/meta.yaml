@@ -1,6 +1,6 @@
 {% set name = "conda-build" %}
-{% set version = "3.17.6" %}
-{% set sha256 = "830578aaa2234938bd7a830093dd3bd5232bb6eed4e54f0ebe345f3dda9dc077" %}
+{% set version = "3.16.3" %}
+# {% set sha256 = "830578aaa2234938bd7a830093dd3bd5232bb6eed4e54f0ebe345f3dda9dc077" %}
 
 package:
   name: {{ name }}
@@ -9,7 +9,7 @@ package:
 source:
   fn: {{ name}}-{{ version }}.tar.gz
   url: https://github.com/conda/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  # sha256: {{ sha256 }}
 
 build:
   number: 0
@@ -43,7 +43,7 @@ requirements:
     - pkginfo
     - psutil
     - python
-    - py-lief  # [not (win and py2k)]
+    # - py-lief  # [not (win and py2k)]
     - pyyaml
     - scandir            # [py27]
     - six
